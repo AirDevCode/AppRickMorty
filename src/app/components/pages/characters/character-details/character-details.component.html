@@ -1,0 +1,64 @@
+<div class="container-detail" *ngIf= "character$ | async as character">
+    <div class="container-lateral">
+        <button (click)="onGoBack()" class="back-responsive">
+            X
+         </button> 
+            <img [src]="character.image" [alt]="character.name" class="card-img-top"/>
+            <div class="smallinfo">
+                <h3 class="title-info">Specie</h3>
+                <h4 class="desc-title">{{ character.species }}</h4>
+            </div>
+            <div class="smallinfo">
+                <h3 class="title-info">Status</h3>
+                <h4 class="desc-title">{{ character.status }}</h4>
+            </div>   
+        <div class="lateral">
+            <h2 [routerLink]="['/character-details', character.id]" class="card_name"  >{{ character.name | slice: 0:15}}</h2>
+            <h4 class="text-muted card_data1 subtitle">{{ character.species }}</h4>
+        </div>
+          
+
+        </div>      
+            
+        <div class="container-info">
+            <button (click)="onGoBack()" class="back">
+                X
+             </button>   
+            <div class="content">
+                <h2 [routerLink]="['/character-details', character.id]" class="card_name info-title" >{{ character.name | slice: 0:15}}</h2>
+                <h4 class="text-muted card_data1 subtitle info-title ">{{ character.species }}</h4>
+                
+               <div class="atributes">
+                <div class="line-atributes">
+                    <h3 class="atributo">Género:</h3>
+                    <h4 class="description">{{ character.gender }}</h4>
+                </div>
+                <div class="line-atributes">
+                    <h3 class="atributo">status:</h3>
+                    <h4 class="description">{{ character.status }}</h4>
+                </div>
+                <div class="line-atributes">
+                    <h3 class="atributo">Género:</h3>
+                    <h4 class="description">{{ character.gender }}</h4>
+                </div>
+                <div class="line-atributes">
+                    <h3 class="atributo">status:</h3>
+                    <h4 class="description">{{ character.status }}</h4>
+                </div>
+                <div class="line-atributes">
+                    <h3 class="atributo">Género:</h3>
+                    <h4 class="description">{{ character.gender }}</h4>
+                </div>
+                <div class="line-atributes">
+                    <h3 class="atributo">status:</h3>
+                    <h4 class="description">{{ character.status }}</h4>
+                </div>
+           
+
+                
+               </div>
+                
+            </div>
+        </div>    
+</div>
+
